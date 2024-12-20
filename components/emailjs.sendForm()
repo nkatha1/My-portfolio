@@ -1,0 +1,17 @@
+emailjs
+  .sendForm(
+    service_jby8rb4,  //Service ID
+    template_obfzawq, //Template ID
+    e.target,        // The form element
+    EQdajZuelUAiHDPhy    // Public ID
+  )
+  .then(
+    (result) => {
+      console.log(result.text);
+      alert('Message sent successfully!');
+    },
+    (error) => {
+      console.log(error.text);
+      alert('Failed to send message. Please try again later.');
+    }
+  );
